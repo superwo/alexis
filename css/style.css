@@ -1040,6 +1040,7 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  overflow-x: hidden;
 }
 
 body.lock {
@@ -1123,7 +1124,6 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  overflow-x: hidden;
 }
 
 .content {
@@ -2059,6 +2059,7 @@ section {
   text-align: center;
   padding-bottom: 2rem;
   cursor: pointer;
+  outline: none !important;
 }
 
 .team__item:hover .team__item-img img {
@@ -3225,6 +3226,11 @@ body.ie .ibg img {
     bottom: -5rem;
   }
 
+  .why__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
   .blog__item--large {
     margin-bottom: 3rem !important;
   }
@@ -3542,6 +3548,17 @@ body.ie .ibg img {
 
   .secondary-title {
     font-size: 3rem;
+  }
+
+  .cta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .cta__text {
+    margin-bottom: 2rem;
   }
 
   .footer__column {
