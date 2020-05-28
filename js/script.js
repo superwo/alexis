@@ -2890,7 +2890,25 @@ $(document).ready(function () {
   new ScrollMagic.Scene({
     triggerElement: '.team__list',
     triggerHook: 0.65
-  }).setTween(teamAnimatin).addTo(controller); // scroll to stats section
+  }).setTween(teamAnimatin).addTo(controller); // steps section animation
+
+  var stepsItemsLeft = $('.steps__box:odd');
+  var stepsItemsRight = $('.steps__box:even');
+  var stepsAnimatin = gsap.timeline();
+  stepsAnimatin.from(stepsItemsRight, {
+    opacity: 0,
+    x: -200,
+    stagger: 0.4
+  });
+  stepsAnimatin.from(stepsItemsLeft, {
+    opacity: 0,
+    x: 200,
+    stagger: 0.4
+  });
+  new ScrollMagic.Scene({
+    triggerElement: '.steps__list',
+    triggerHook: 0.7
+  }).setTween(stepsAnimatin).addTo(controller); // scroll to stats section
 
   new ScrollMagic.Scene({
     triggerElement: '.stats__row',

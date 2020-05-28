@@ -1034,10 +1034,10 @@ p:not(:last-child) {
 html {
   font-size: 62.5%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  height: 100%;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
@@ -1338,14 +1338,14 @@ section {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  z-index: 20;
+  z-index: 200;
   -webkit-box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
 }
 
 .header__row {
@@ -3229,6 +3229,7 @@ body.ie .ibg img {
   .why__list {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-bottom: 5rem;
   }
 
   .blog__item--large {
@@ -3559,6 +3560,8 @@ body.ie .ibg img {
 
   .cta__text {
     margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
   }
 
   .footer__column {
@@ -3660,6 +3663,10 @@ body.ie .ibg img {
             flex: 1 1 100%;
   }
 
+  .why__item {
+    margin-bottom: 2rem;
+  }
+
   .blog__items > div {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -3684,6 +3691,14 @@ body.ie .ibg img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .newsletter {
+    padding: 8rem 0;
+  }
+
+  .newsletter__title {
+    font-size: 2rem;
   }
 
   .newsletter__input {
